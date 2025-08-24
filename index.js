@@ -20,8 +20,8 @@ let splits = false;
 let buttonLocation = -1;
 let pb = -1;
 
-const BUTTONWIDTH = 0.4
-const BUTTONHEIGHT = 0.26
+const BUTTONWIDTH = 0.3761
+const BUTTONHEIGHT = 0.25
 registerWhen(register("renderWorld", () => {
     if (itsHappening) {
         renderBackground();
@@ -40,7 +40,7 @@ registerWhen(register("renderWorld", () => {
             color = [1, 0, 0];
         }
 
-        RenderLib.drawInnerEspBox(x - 0.5, y + 0.5 - BUTTONHEIGHT / 2 + 0.001, z + 0.07, BUTTONWIDTH, BUTTONHEIGHT, ...color, 0.7, false);
+        RenderLib.drawInnerEspBox(x - 0.5, y + 0.5 - BUTTONHEIGHT / 2 - 0.0001, z + 0.61, BUTTONWIDTH, BUTTONHEIGHT+0.0005, ...color, 0.7, false);
     }
 }), () => currentPattern.length);
 
